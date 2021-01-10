@@ -12,6 +12,7 @@ before_script:
 after_script:
   - env
   - $CC --version
+  - grep CC Makefile
 
 matrix:
   include:
