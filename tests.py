@@ -3,8 +3,6 @@
 import sys
 import unittest
 
-import DNS
-
 try:
     import DNS
 except ImportError:
