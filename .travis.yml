@@ -3,7 +3,6 @@ language: c
 sudo: required
 
 before_script:
-  - python --version
   # Add an IPv6 config
   # https://github.com/travis-ci/travis-ci/issues/8361
   - if [ "${TRAVIS_OS_NAME}" == linux ]; then
@@ -23,6 +22,4 @@ matrix:
             - python3-dns
       env:
          - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
-      install:
-         - update-alternatives python /usr/bin/python3 10
 
