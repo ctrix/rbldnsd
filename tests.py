@@ -3,11 +3,11 @@
 import sys
 import unittest
 
-try:
+#try:
     import DNS
-except ImportError:
-    print("TESTS SKIPPED: the python3-dns library is not installed")
-    sys.exit(0)
+#except ImportError:
+#    print("TESTS SKIPPED: the python3-dns library is not installed")
+#    sys.exit(0)
 
 from test_btrie import *
 from test_ip6trie import *
