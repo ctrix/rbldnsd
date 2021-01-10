@@ -22,7 +22,7 @@ matrix:
       env:
          - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
       install:
-         - pip3 install py3dns
+         - pip install py3dns
 
     - os: linux
       addons:
