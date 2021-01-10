@@ -18,8 +18,7 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-4.9
+            - python3-dns
       env:
          - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
-      install:
-         - pip3 install py3dns
 
