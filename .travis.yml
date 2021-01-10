@@ -3,12 +3,15 @@ language: c
 sudo: required
 
 before_script:
-  - dpkg -l | grep python
   # Add an IPv6 config
   # https://github.com/travis-ci/travis-ci/issues/8361
   - if [ "${TRAVIS_OS_NAME}" == linux ]; then
       sudo sh -c 'echo 0 > /proc/sys/net/ipv6/conf/all/disable_ipv6';
     fi
+
+after_script:
+  - env
+  - $CC --version
 
 matrix:
   include:
@@ -71,4 +74,3 @@ matrix:
             - python3-dns
       env:
          - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
-
